@@ -132,6 +132,7 @@ const Form = ({
               </div>
             </div>
             <div>
+                <a href="https://github.com/Farrux02/react-task2.git" className="repo-link">Repo</a>
               <button className="cancel" onClick={() => clearValues()}>
                 Отменить
               </button>
