@@ -11,3 +11,137 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button,
+select {
+  cursor: pointer;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.mini-wrapper {
+  position: absolute;
+  left: 735px;
+  top: 25px;
+  width: 650px;
+  height: 300px;
+  box-shadow: -3px -6px 20px -5px rgba(0, 0, 0, 0.25), 3px 6px 20px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.div-heading {
+  padding: 25px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.section {
+  position: relative;
+  width: 1380px;
+  height: 800px;
+  background: #FFFFFF;
+  box-shadow: 3px 6px 20px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 30px 20px;
+  padding: 25px 25px 12px 25px;
+}
+
+.form-wrapper__content {
+  padding: 25px;
+}
+
+label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #303940;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 600px;
+  height: 40px;
+  border: 1px solid #E5E9EB;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 8px 16px;
+  color: #303940;
+  margin-bottom: 15px;
+}
+
+.form-wrapper-mini {
+  height: 300px;
+}
+
+select {
+  width: 270px;
+  height: 40px;
+  border: 1px solid #E5E9EB;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+.save {
+  position: absolute;
+  border: none;
+  color: #fff;
+  width: 160px;
+  height: 40px;
+  background: #0067F4;
+  border-radius: 6px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.cancel {
+  position: absolute;
+  border: 1px solid #E5E9EB;
+  color: #0067F4;
+  width: 160px;
+  height: 40px;
+  background: #fff;
+  border-radius: 6px;
+  bottom: 25px;
+  right: 192px;
+}
+
+table {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px
+}
+
+thead tr,
+tbody tr {
+  display: grid;
+  grid-template-columns: 48px 160px 160px 160px 220px 136px 160px 160px 50px;
+  text-align: center;
+}
+
+thead tr th,
+tbody tr th {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  height: 24px;
+  box-shadow: inset 1px 1px 0px #E5E9EB, inset -1px -1px 0px #E5E9EB;
+}
+
+.del-btn{
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF;
+  border: 1px solid #E5E9EB;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 4px;
+  background-repeat: no-repeat;
+  background-image: url('./Assets/images/delete.png');
+  background-position: center;
+}
