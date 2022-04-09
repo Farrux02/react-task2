@@ -1,4 +1,3 @@
-import { useState } from "react";
 import FormInput from "../FormInput";
 import "./form.css";
 
@@ -10,6 +9,7 @@ const Form = ({
   jobTypes,
   clearValues,
 }) => {
+
   return (
     <>
       <section className="section">
@@ -28,8 +28,10 @@ const Form = ({
                   required
                   value={values.name}
                   handleChange={(e) =>
-                    setValues({ ...values, name: e.target.value })
+                    setValues({  ...values, name: e.target.value })
                   }
+                  pattern="^[a-zA-Z]{3,15}$"
+                  errorMessage="Name is required, must be at least 3 characters and must not contain numbers"
                 />
                 <FormInput
                   label="Surname"
@@ -41,6 +43,8 @@ const Form = ({
                   handleChange={(e) =>
                     setValues({ ...values, surname: e.target.value })
                   }
+                  pattern="^[a-zA-Z]{3,15}$"
+                  errorMessage="Surname is required, must be at least 3 characters and must not contain numbers"
                 />
                 <FormInput
                   label="Phone Number"
@@ -49,6 +53,7 @@ const Form = ({
                   type="number"
                   required
                   value={values.phoneNumber}
+                  errorMessage="Phone number is required"
                   handleChange={(e) =>
                     setValues({ ...values, phoneNumber: e.target.value })
                   }
@@ -63,6 +68,10 @@ const Form = ({
                   handleChange={(e) =>
                     setValues({ ...values, email: e.target.value })
                   }
+                  pattern={
+                    "^[a-zA-Z0-9.!#$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
+                  }
+                  errorMessage="Email is required, adn must contain @"
                 />
                 <FormInput
                   label="Date of birth"
@@ -74,6 +83,7 @@ const Form = ({
                   handleChange={(e) =>
                     setValues({ ...values, birthDate: e.target.value })
                   }
+                  errorMessage="Date of birth is required"
                 />
               </div>
             </div>
@@ -92,6 +102,7 @@ const Form = ({
                   handleChange={(e) =>
                     setValues({ ...values, companyName: e.target.value })
                   }
+                  errorMessage="Company name is required"
                 />
                 <div className="select-flex">
                   <div>
@@ -99,10 +110,12 @@ const Form = ({
                     <select
                       name="jobType"
                       id="jobType"
+                      value={values.jobType}
                       onChange={(e) => {
                         setValues({ ...values, jobType: e.target.value });
                       }}
                     >
+                      <option value="">Select job type</option>
                       {jobTypes?.map((jobType) => (
                         <option key={jobType?.id} value={jobType?.label}>
                           {jobType?.label}
@@ -119,8 +132,8 @@ const Form = ({
                       onChange={(e) =>
                         setValues({ ...values, experience: e.target.value })
                       }
-                      defaultValue="5"
                     >
+                      <option value="">Select experience</option>
                       <option value="5">5</option>
                       <option value="4">4</option>
                       <option value="3">3</option>
@@ -152,6 +165,7 @@ const Form = ({
                   name="company"
                   type="text"
                   required
+                  placeholder='Add job type'
                   value={values.jobType}
                   handleChange={(e) =>
                     setValues({ ...values, jobType: e.target.value })

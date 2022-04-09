@@ -25,14 +25,14 @@ const UsersList = ({ users, deleteUser }) => {
               <tr key={user?.uuid}>
                 <th>{++index}</th>
                 <th>
-                  {user?.name} {user?.surname}
+                  {user?.user_infos.firstName} {user?.user_infos.lastName}
                 </th>
-                <th>{user?.birthDate}</th>
-                <th>{user?.phoneNumber}</th>
-                <th>{user?.email}</th>
-                <th>{user?.companyName}</th>
-                <th>{user?.jobType}</th>
-                <th>{user?.experience}</th>
+                <th>{user?.user_infos.dob}</th>
+                <th>{user?.user_infos.phone_number}</th>
+                <th>{user?.user_infos.email}</th>
+                <th>{user?.work_area.company_name}</th>
+                <th>{user?.work_area.job_type}</th>
+                <th>{user?.work_area.experience}</th>
                 <th>
                   <button 
                   className='del-btn'

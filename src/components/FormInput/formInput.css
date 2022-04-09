@@ -1,0 +1,14 @@
+.errorMessage {
+    font-size: 13px;
+    color: red;
+    margin: 0 5px 0;
+    display: none;
+}
+
+input:invalid[touched="true"] ~ .errorMessage {
+    display: block;
+}
+
+input:invalid[touched="true"]{
+    border: 1px solid red;
+}
