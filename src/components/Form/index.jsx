@@ -110,6 +110,7 @@ const Form = ({
                     <select
                       name="jobType"
                       id="jobType"
+                      required
                       value={values.jobType}
                       onChange={(e) => {
                         setValues({ ...values, jobType: e.target.value });
@@ -129,6 +130,7 @@ const Form = ({
                       name="experience"
                       id="experience"
                       value={values.experience}
+                      required
                       onChange={(e) =>
                         setValues({ ...values, experience: e.target.value })
                       }

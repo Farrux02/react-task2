@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './formInput.css'
 
-const FormInput = ({ type, name, label, required, handleChange, placeholder, errorMessage, ...props }) => {
+const FormInput = ({ type, name, label, required = false, handleChange, placeholder, errorMessage, ...props }) => {
 
   const [touched, setTouched] = useState(false)
 
